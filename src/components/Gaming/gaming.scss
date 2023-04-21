@@ -1,0 +1,38 @@
+.wrapGaming {
+    .gamingItem {
+        label {
+            font-weight: 600;
+        }
+
+        .wrapGamingItemSelectItem {
+            display: flex;
+            align-items: center;
+
+            .gamingItemSelectItem {
+                background: black;
+                border: 1px solid;
+                padding: 16px;
+                margin-right: 8px;
+                width: 50%;
+                cursor: pointer;
+
+                span {
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    margin-left: 8px;
+                }
+                &.gamingItemSelectItemDisabled {
+                    background: white;
+                    span {
+                        opacity: 1;
+                    }
+                }
+                &.gamingItemSelectItemDisabledChoosed {
+                    background: #4cbae4;
+                }
+            }
+        }
+    }
+}
