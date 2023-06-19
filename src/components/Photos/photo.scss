@@ -1,0 +1,16 @@
+.wrapPhoto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .itemPhoto {
+        flex: 0 0 48%;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

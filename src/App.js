@@ -1,15 +1,17 @@
+import { useState } from "react";
 import bgLove from "./assets/images/bgLove.jpg";
 import imgMyAvatar from "./assets/images/myAvatar.jpeg";
 import imgHerAvatar from "./assets/images/herAvatar.jpg";
 import imgHeart from "./assets/images/imgHeart.jpeg";
 import "./App.scss";
+
 import Gaming from "./components/Gaming";
-import { useState } from "react";
+import Photos from "./components/Photos";
 
 function App() {
   const [selectArea, setSelectArea] = useState(0);
   const renderItemSelected = () => {
-    const arr = ["Địa điểm ăn chơi", "Cùng nhau đi"];
+    const arr = ["Địa điểm ăn chơi", "Ảnh kỷ niệm"];
     return arr.map((item, index) => {
       return (
         <div
@@ -37,7 +39,7 @@ function App() {
         </div>
         <div className="wrapSelectArea">{renderItemSelected()}</div>
         {selectArea === 0 && <Gaming />}
-        {selectArea === 1 && <div>Đợi anh nhé :P</div>}
+        {selectArea === 1 && <Photos />}
       </div>
     </div>
   );
